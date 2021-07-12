@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành - Sự kiện chuột</title>
+</head>
+<body>
+
+<img id="myimage" src="myImage.png" width="200" alt="Hình gì đó!"/> <br><br>
+<label for="moverightButton">Click the button below to move the image to the right!</label> <br><br>
+<button id="moverightButton" type="button" onclick="moveRight()">Click me!</button>
+
+<script>
+    let imgObj = null;
+
+    function init() {
+        imgObj = document.getElementById("myimage");
+        imgObj.style.position = "relative";
+        imgObj.style.left = '0px';
+    }
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+        console.log(imgObj.style.left);
+    }
+    window.onload = init;
+
+</script>
+
+</body>
+</html>
